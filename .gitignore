@@ -1,0 +1,26 @@
+# Build directories
+/build/
+cmake-build-*/
+
+# Qt Creator/Qt project files
+*.user
+*.pro.user*
+*.qmake.stash
+
+# CMake cache and generated files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+Testing/
+
+# IDE metadata
+/.idea/
+/.vscode/
+
+# macOS artifacts
+.DS_Store
+
+# Other
+*.log
