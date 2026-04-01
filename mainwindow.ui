@@ -15,13 +15,158 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="5" column="0" rowspan="3">
-     <widget class="QLCDNumber" name="lcdNumber"/>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="btnBufferToggle">
+      <property name="text">
+       <string>Enable Buffer Mode</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPushButton" name="ecgModeButton">
+      <property name="text">
+       <string>ECG Mode : Off</string>
+      </property>
+     </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QPushButton" name="pushButton_start">
+     <widget class="QPushButton" name="btnConnectionToggle">
       <property name="text">
        <string>Turn On</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_port">
+      <property name="text">
+       <string>Port Selected : None</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" rowspan="4">
+     <widget class="QLCDNumber" name="lcdNumber"/>
+    </item>
+    <item row="9" column="0" rowspan="2" colspan="2">
+     <widget class="QGroupBox" name="ecgGroup">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="1">
+        <widget class="QLCDNumber" name="lcdBPM">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="labelRecStatus">
+         <property name="text">
+          <string>Status : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelBPM">
+         <property name="text">
+          <string>BPM : </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Result :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labelRR">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>RR Interval : </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3" colspan="2">
+        <widget class="QLCDNumber" name="lcdRR">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3" colspan="2">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Predict</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Confidence : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLabel" name="ecgResult">
+         <property name="text">
+          <string>Waiting</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4">
+        <widget class="QLabel" name="ecgConf">
+         <property name="text">
+          <string>Waiting</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="ecgRec">
+         <property name="text">
+          <string>ECG Recording : Off</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="labelThreshold">
+         <property name="text">
+          <string>Threshold : 580 (Default)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="btnSelectPort">
+      <property name="text">
+       <string>Select Port </string>
       </property>
      </widget>
     </item>
@@ -37,24 +182,10 @@
       </layout>
      </widget>
     </item>
-    <item row="7" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+    <item row="11" column="0" colspan="2">
+     <widget class="QLabel" name="SampleData">
       <property name="text">
-       <string>Enable Buffer Mode</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>Select Port </string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label_port">
-      <property name="text">
-       <string>Port Selected : None</string>
+       <string>DATA : </string>
       </property>
      </widget>
     </item>

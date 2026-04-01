@@ -18,6 +18,8 @@ Testing/
 # IDE metadata
 /.idea/
 /.vscode/
+/.qtcreator/
+/.gemini/
 
 # macOS artifacts
 .DS_Store

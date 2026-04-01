@@ -33,7 +33,7 @@
        <widget class="QLineEdit" name="lineEdit_Max"/>
       </item>
       <item row="9" column="0">
-       <widget class="QPushButton" name="pushButton_saveClose">
+       <widget class="QPushButton" name="btnSaveClose">
         <property name="text">
          <string>Save and Close</string>
         </property>
@@ -53,7 +53,7 @@
        </widget>
       </item>
       <item row="9" column="1">
-       <widget class="QPushButton" name="pushButton_setDefault">
+       <widget class="QPushButton" name="btnSetDefault">
         <property name="text">
          <string>Revert Changes to Default</string>
         </property>
@@ -79,6 +79,35 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_Central"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_Central">
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="text">
+         <string>Set central Value :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>ECG Threshold :</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="lineEdit_threshold"/>
+      </item>
      </layout>
     </widget>
    </item>
@@ -95,7 +124,17 @@
       <string>WIREFLUX</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_Version">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
      </property>
     </widget>
    </item>
